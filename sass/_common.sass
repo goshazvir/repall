@@ -1,0 +1,121 @@
+// var & mixins
+// fonts
+// base
+	// html, body, .out, selection
+	// a, .h2, .h3, .h4, .h5
+// .header
+// .footer
+// index.html style
+///////////////////////////////// *  * ////////////////////////////////
+
+///////////////////////////////// * var & mixins * ////////////////////////////////
+
+
+///////////////////////////////// * fonts * ////////////////////////////////
+
+///////////////////////////////// * base * ////////////////////////////////
++selection(red, blue)
+
+html
+	font-size: 62.5%
+	font-family: sans-serif
+	-ms-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+
+body
+	z-index: 666
+	margin: 0
+	font:
+		family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
+		weight: normal
+	line-height: 1.4
+	+fs(14) 
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+.wrap
+	margin: 0  auto
+	padding: 100px 10px
+.is-slide
+	color: white
+
+.slide1
+	background: #e95103
+	color: #d0ecf6
+.slide2
+	background: #15d657
+	color: #e1f7e9
+	position: relative
+.slide3
+	background: #f8f8f8
+	color: #323232
+	position: relative
+	.h1
+		color: #323232
+.slide4
+	background: #29235c
+	position: relative
+.slide5
+	background: #fff
+	color: #323232
+	position: relative
+	.h1
+		color: #323232
+.h1
+	margin-bottom: 30px
+	font-size: 30px
+	color: #FFF 
+///////////////////////////////// * .header * ////////////////////////////////
+.header
+	width: 100%
+	height: 70px
+	line-height: 70px
+	background: #fff
+	position: fixed
+	.header-i
+		padding: 0 70px
+		+clr
+.logo
+	float: left
+.header__right
+	float: right
+	+clr
+	.lang
+		margin-right: 60px
+		float: left
+		+clr
+	li
+		margin-right: 5px
+		float: left
+	a
+		font-size: 12px
+		color: #9C9C9D
+		&.is-active
+			color: #e95103 
+	.header__tel
+		float: right
+		font-size: 25px
+
+
+	
+
+
+///////////////////////////////// * .footer * ////////////////////////////////
+.footer
+	width: 100%
+	height: 70px
+	line-height: 70px
+	background: red
+	position: absolute
+	top: 0
+	z-index: 1666
+.footer-i
+	padding: 0 70px
+	+clr
+
+
+
+///////////////////////////////// * index.html style * ////////////////////////////////

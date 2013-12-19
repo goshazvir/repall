@@ -1,0 +1,259 @@
+// fonts & text
+// bg (selection, border-radius, box-sising, gradient, cover, rotate, filter, )
+// misc (clr, transition, placeholder, unselect)
+// scrollbar
+
+///////////////////////////////// * fonts & text * ////////////////////////////////
+@mixin font($alias, $name)
+	@font-face
+		font-family: $alias
+		src: url('fonts/'+$name+'.eot')
+		src: url("fonts/"+$name+".eot?#iefix") format("embedded-opentype"), url("fonts/"+$name+".woff") format("woff"), url("fonts/"+$name+".ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+
+@mixin fs($sizeValue: 16)
+	font-size: $sizeValue + px
+	font-size: ($sizeValue / 10) + rem
+	
+@mixin prevent-text()
+	-ms-word-break: break-all
+	word-break: break-all
+	word-break: break-word
+	-webkit-hyphens: auto
+	-moz-hyphens: auto
+	hyphens: auto
+
+@mixin font-smoothing($val: antialiased)
+	-webkit-font-smoothing: 	$val
+	-moz-font-smoothing: 	$val
+	-ms-font-smoothing: 		$val
+	-o-font-smoothing: 		$val
+	-moz-osx-font-smoothing: grayscale
+
+@mixin ht
+	font: 0/0 a
+	text-shadow: none
+	color: transparent
+	
+///////////////////////////////// * bg * ////////////////////////////////
+@mixin selection($color, $val)
+	::selection
+		background: ($val)
+		color: ($color)
+	::-moz-selection
+		background: ($val)
+		color: ($color)
+		
+@mixin br($val)
+	-webkit-border-radius: $val + px
+	border-radius: $val + px
+		
+@mixin box
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+@mixin g($color1, $color2)
+	@include background-image(linear-gradient($color1, $color2))
+
+@mixin gh($color1, $color2)
+	@include background-image(linear-gradient(left, $color1, $color2))
+
+@mixin cover
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+	
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0)
+	-moz-transform: rotate($deg + deg)
+	-o-transform: rotate($deg + deg)
+	-webkit-transform: rotate($deg + deg)
+	-ms-transform: rotate($deg + deg)
+	transform: rotate($deg + deg)
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand')
+	*zoom: 1
+
+@mixin gray
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale") /* Firefox 10+ */
+	filter: gray /* IE6-9 */
+	-webkit-filter: grayscale(100%) /* Chrome 19+ & Safari 6+ */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)
+	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"
+
+@mixin gray-half
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0.5\'/></filter></svg>#grayscale") /* Firefox 10+ */
+	filter: gray alpha(opacity=50) /* IE6-9 */
+	-webkit-filter: grayscale(50%) /* Chrome 19+ & Safari 6+ */
+
+@mixin gray-zero
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale")
+	-webkit-filter: grayscale(0%)
+
+///////////////////////////////// * misc * ////////////////////////////////
+
+@mixin clr
+	&:before, &:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+	*zoom: 1
+
+@mixin transition($what)
+	-moz-transition: $what
+	-o-transition: $what
+	-webkit-transition: $what
+	-ms-transition: $what
+	transition: $what
+
+@mixin placeholder($color)
+	&:-moz-placeholder,
+	&::-moz-placeholder
+		color: $color
+		opacity: 1
+	&::-webkit-input-placeholder
+		color: $color
+
+@mixin unselect()
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+///////////////////////////////// * scrollbar * ////////////////////////////////
+
+@mixin scrollbar 
+	& ::-moz-scrollbar 
+		@content
+
+	& ::-webkit-scrollbar 
+		@content
+
+	& ::scrollbar
+		@content
+
+@mixin scrollbar-track
+	& ::-moz-scrollbar-track
+		@content
+
+	& ::-webkit-scrollbar-track
+		@content
+
+	& ::scrollbar-track
+		@content
+
+@mixin scrollbar-thumb
+	& ::-moz-scrollbar-thumb
+		@content
+
+	& ::-webkit-scrollbar-thumb
+		@content
+
+	& ::scrollbar-thumb
+		@content
+
+@mixin scrollbar-track-piece
+	& ::-moz-scrollbar-track-piece
+		@content
+
+	& ::-webkit-scrollbar-track-piece
+		@content
+
+	& ::scrollbar-track-piece
+		@content
+
+///////////////////////////////// * MY mixins * ////////////////////////////////
+
+@mixin position($width, $height)
+	@if $width
+		left: 50% 
+		width: $width + px
+		margin-left: -($width / 2) + px
+	@if $height
+		top: 50%
+		height: $height + px
+		margin-top: -($height / 2) + px
+// +position(500, 500)
+// +position(false, 500)
+// +position(500, false)
+
+@mixin arr ($width, $height, $bg, $direction)
+	width: 0px
+	height: 0px
+	border-style: solid
+	@if $direction == t
+		border-width: 0 ($width / 2) + px $height + px ($width / 2) + px
+		border-color: transparent transparent $bg transparent
+	@if $direction == r
+		border-width: ($height / 2) + px 0 ($height / 2) + px $width + px
+		border-color: transparent transparent transparent $bg
+	@if $direction == b
+		border-width: $height + px ($width / 2) + px 0 ($width / 2) + px
+		border-color: $bg transparent transparent transparent
+	@if $direction == l
+		border-width: ($height / 2) + px $width + px ($height / 2) + px 0
+		border-color: transparent $bg transparent transparent
+	@if $direction == tl
+		border-width: $height + px $width + px 0 0
+		border-color: $bg transparent transparent transparent
+	@if $direction == tr
+		border-width: 0 $width + px $height + px 0
+		border-color: transparent $bg transparent transparent
+	@if $direction == br
+		border-width: 0 0 $height + px $width + px
+		border-color: transparent transparent $bg transparent
+	@if $direction == bl
+		border-width: $width + px 0 0 $height + px 
+		border-color: transparent transparent transparent $bg
+// +arr(500,50, #000, left)
+// +arr(500,50, #000, bottom-l)
+
+
+@mixin arr2 ($width, $height, $bg, $direction)
+	&:after
+		content: ""
+		width: 0px
+		height: 0px
+		border-style: solid
+		@if $direction == t
+			border-width: 0 ($width / 2) + px $height + px ($width / 2) + px
+			border-color: transparent transparent $bg transparent
+		@if $direction == r
+			border-width: ($height / 2) + px 0 ($height / 2) + px $width + px
+			border-color: transparent transparent transparent $bg
+		@if $direction == b
+			border-width: $height + px ($width / 2) + px 0 ($width / 2) + px
+			border-color: $bg transparent transparent transparent
+		@if $direction == l
+			border-width: ($height / 2) + px $width + px ($height / 2) + px 0
+			border-color: transparent $bg transparent transparent
+		@if $direction == tl
+			border-width: $height + px $width + px 0 0
+			border-color: $bg transparent transparent transparent
+		@if $direction == tr
+			border-width: 0 $width + px $height + px 0
+			border-color: transparent $bg transparent transparent
+		@if $direction == br
+			border-width: 0 0 $height + px $width + px
+			border-color: transparent transparent $bg transparent
+		@if $direction == bl
+			border-width: $width + px 0 0 $height + px 
+			border-color: transparent transparent transparent $bg
+
+@mixin arr-tra($width, $height,$bg, $direction)  
+	+arr($width, $height,transparent,r)
+	position: relative
+	&:after, &:before
+		content: ""
+		position: absolute
+		z-index: 666
+		left: -$width + px
+	&:after
+		+arr($width,$width,$bg,tr)
+		top: -$width + px
+	&:before
+		+arr($width,$width,$bg,br)
+		bottom: -$width + px
