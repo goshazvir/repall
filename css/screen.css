@@ -134,4 +134,6 @@ a:hover { text-decoration: none; }
 .footer-i:before, .footer-i:after { content: ""; display: table; }
 .footer-i:after { clear: both; }
 
+.footer_fixed { position: fixed; }
+
 [class^="i-"], [class*=" i-"] { display: inline-block; vertical-align: middle; }
