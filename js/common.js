@@ -1,16 +1,21 @@
 $(document).ready(function() {
-	var height = $(window).height();
-	$('.is-slide').height(height);
 
+  function height(){
+    var height = $(window).height();
+    $('.is-slide').height(height);
+  }
+  height();
 
 
 // footer
   function map_scroll() {
-  var position = $(".footer").offset().top;
+    var position = $(".footer").offset().top;
+    var position_2 = $(".slide2").offset().top;
+            
     if ($(window).scrollTop() >= position) {
       $(".footer").addClass('footer_fixed');
     }
-    else {
+    if ($(window).scrollTop() <= position_2) {
       $(".footer").removeClass('footer_fixed');
     }
   }
@@ -24,21 +29,14 @@ $(document).ready(function() {
     map_scroll();
   }
   });
+  
   $(window).resize(function(){
     if ($(".footer").length > 0){
-    map_scroll();
-  }
+      map_scroll();
+    }
+    height();
   });
 
-});
-
-
-
-
-
-$(window).resize(function() {
-	var height = $(window).height();
-	$('.is-slide').height(height);
 });
 
 

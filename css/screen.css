@@ -128,7 +128,7 @@ a:hover { text-decoration: none; }
 .header__right a.is-active { color: #e95103; }
 .header__right .header__tel { float: right; font-size: 25px; }
 
-.footer { width: 100%; height: 70px; line-height: 70px; background: red; position: absolute; top: 0; z-index: 1666; }
+.footer { width: 100%; height: 70px; line-height: 70px; background: rgba(255, 255, 255, 0.9); position: absolute; top: 0; z-index: 1666; }
 
 .footer-i { padding: 0 70px; *zoom: 1; }
 .footer-i:before, .footer-i:after { content: ""; display: table; }
