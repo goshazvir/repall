@@ -3,6 +3,9 @@ $step2: 800px
 $step3: 600px
 $step4: 490px
 
+$nav: 650px
+$nav2: 605px
+
 @mixin r($media:'step1')
 	@if $media == step1
 		// narrower than $width
@@ -24,6 +27,15 @@ $step4: 490px
 		@media only screen and (max-width: $step4)
 			@content
 
+	@else if $media == nav
+		// wider than $width
+		@media only screen and (max-width: $nav)
+			@content
+
+	@else if $media == nav2
+		// wider than $width
+		@media only screen and (max-width: $nav2)
+			@content
 // retina bg
 @mixin retina
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)

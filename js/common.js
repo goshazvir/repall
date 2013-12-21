@@ -37,6 +37,23 @@ $(document).ready(function() {
     height();
   });
 
+
+
+
+
+
+  // navigation
+  $(".nav a").click(function (){
+      var page = $(this).attr("href");
+      page = page.substring(5);
+      $(this).parents(".js-menu-list").hide();
+      $('html, body').animate({
+          scrollTop: $(page).offset().top
+      }, 500);
+
+      return false;
+  });
+
 });
 
 
