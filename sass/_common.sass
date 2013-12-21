@@ -16,20 +16,13 @@
 ///////////////////////////////// * base * ////////////////////////////////
 +selection(red, blue)
 
-html
-	font-size: 62.5%
-	font-family: sans-serif
-	-ms-text-size-adjust: 100%
-	-webkit-text-size-adjust: 100%
-
 body
-	z-index: 666
 	margin: 0
 	font:
 		family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
 		weight: normal
 	line-height: 1.4
-	+fs(14) 
+	font-size: 14px
 
 a
 	text-decoration: none
@@ -59,7 +52,7 @@ a
 	background: #29235c
 	position: relative
 .slide5
-	background: #fff
+	background: #4b7e3e
 	color: #323232
 	position: relative
 	.h1
@@ -76,17 +69,23 @@ a
 	background: #fff
 	position: fixed
 	.header-i
-		padding: 0 70px
+		padding: 0 5%
 		+clr
-.logo
-	float: left
+		@include r(step1)
+			padding: 0 3%
+		@include r(step4)
+			.logo
+				+s(logo_alt)
+
 .header__right
-	float: right
+	overflow: hidden
 	+clr
 	.lang
-		margin-right: 60px
-		float: left
+		margin-right: 6%
+		float: right
 		+clr
+		@include r(step1)
+			margin-right: 3%
 	li
 		margin-right: 5px
 		float: left
@@ -98,11 +97,14 @@ a
 	.header__tel
 		float: right
 		font-size: 25px
+		color: #000
+		@include r(step1)
+			font-size: 21px
 
-
-	
-
-
+.logo
+	+s(logo)
+	margin-top: 20px
+	float: left
 ///////////////////////////////// * .footer * ////////////////////////////////
 .footer
 	width: 100%
@@ -113,11 +115,21 @@ a
 	top: 0
 	z-index: 1666
 .footer-i
-	padding: 0 70px
+	padding: 0 5%
 	+clr
+	.logo-wrap
+		width: 190px
+		height: 71px
+		float: left
+	.logo
+		+s(logo_alt)
+	@include r(step1)
+		padding: 0 3%
+	@include r(step4)
+		.logo-wrap
+			width: auto
+
 
 .footer_fixed
 	position: fixed
-
-
 ///////////////////////////////// * index.html style * ////////////////////////////////
