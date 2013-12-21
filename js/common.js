@@ -47,7 +47,7 @@ $(document).ready(function() {
       var page = $(this).attr("href");
       page = page.substring(5);
       $(this).parents(".js-menu-list").hide();
-      $('html, body').animate({
+      $('body').animate({
           scrollTop: $(page).offset().top
       }, 500);
 
