@@ -6,7 +6,6 @@ $(document).ready(function() {
   }
   height();
 
-
 // footer
   function map_scroll() {
     var position = $(".footer").offset().top;
@@ -37,22 +36,21 @@ $(document).ready(function() {
     height();
   });
 
-
-
-
-
-
   // navigation
   $(".nav a").click(function (){
       var page = $(this).attr("href");
-
       $(this).parents(".js-menu-list").hide();
       $('body').animate({
           scrollTop: $(page).offset().top
       }, 500);
-
       return false;
   });
+
+  // nav addClass and removeClass is-active
+  $('.nav a').click(function(event) {
+    $(this).parent().addClass('is-active').siblings().removeClass('is-active');
+  });
+
 
 });
 
