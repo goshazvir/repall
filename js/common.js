@@ -6,7 +6,6 @@ $(document).ready(function() {
   }
   height();
 
-
 // footer
   function map_scroll() {
     var position = $(".footer").offset().top;
@@ -37,21 +36,14 @@ $(document).ready(function() {
     height();
   });
 
-
-
-
-
-
-  // navigation
+// navigation
   $(".nav a").click(function (){
       var page = $(this).attr("href");
-      page = page.substring(5);
       $(this).parents(".js-menu-list").hide();
-      $('body').animate({
-          scrollTop: $(page).offset().top
-      }, 500);
-
-      return false;
+        $('html, body').animate({
+            scrollTop: $(page).offset().top
+        }, 500);
+    return false;
   });
 
 });
