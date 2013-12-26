@@ -3,8 +3,14 @@ $(document).ready(function() {
   function height(){
     var height = $(window).height();
     $('.is-slide').height(height);
+
+    $('.slider li').height(height);
   }
   height();
+
+  // find width for SLIDER LI SLIDER_WRAP and set height
+
+
 
 // footer
   function map_scroll() {
@@ -34,9 +40,14 @@ $(document).ready(function() {
       map_scroll();
     }
     height();
+    // blabla();
+    // blabla2();
+    // findwidth();
+    // findheight();
+    // findposition();
   });
 
-  // navigation
+  // SCROLL click navigation
   $(".nav a").click(function (){
       var page = $(this).attr("href");
       $(this).parents(".js-menu-list").hide();
@@ -45,13 +56,35 @@ $(document).ready(function() {
       }, 500);
       return false;
   });
+  // SCROLL click button
+  $(".slide-next").click(function (){
+    var page2 = $(this).attr("href");
+    $('body').animate({
+        scrollTop: $(page2).offset().top
+    }, 500);
+    $('.nav li').removeClass('is-active');
+    $('.nav li:first-child').addClass('is-active');
+    return false;
+  });
+
+  // SCROLL click logo
+  $(".logo").click(function (){
+    var page2 = $(this).attr("href");
+    $('body').animate({
+        scrollTop: $(page2).offset().top
+    }, 500);
+    return false;
+  });
 
   // nav addClass and removeClass is-active
   $('.nav a').click(function(event) {
     $(this).parent().addClass('is-active').siblings().removeClass('is-active');
   });
 
-
+  // slider addClass and removeClass is-active
+  $('.slider li span').click(function(event) {
+    $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+  });
 });
 
 
