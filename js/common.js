@@ -1,14 +1,26 @@
 $(document).ready(function() {
-
+    
+  
   function height(){
     var height = $(window).height();
-    $('.is-slide').height(height);
+    var x = 0.22;
+    var benefit_top = height * x;
+    var benefit_cont = (height - benefit_top);
 
+    var x2 = 0.13;
+    var x3 = 0.11;
+
+    var x4 = 0.43;
+
+    $('.is-slide').height(height);
     $('.slider li').height(height);
+    $(".benefits__top").css('height', benefit_top);
+    $(".benefits__top").css('line-height', (+benefit_top + 'px'));
+    $(".benefits__cont").css('height', benefit_cont);
+    $("")
   }
   height();
 
-  // find width for SLIDER LI SLIDER_WRAP and set height
 
 
 
@@ -40,11 +52,6 @@ $(document).ready(function() {
       map_scroll();
     }
     height();
-    // blabla();
-    // blabla2();
-    // findwidth();
-    // findheight();
-    // findposition();
   });
 
   // SCROLL click navigation

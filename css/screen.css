@@ -101,8 +101,6 @@ a:hover { text-decoration: none; }
 .slide5 { background: #4b7e3e; color: #323232; position: relative; }
 .slide5 .h1 { color: #323232; }
 
-.slide6 { background: #e903b6; position: relative; }
-
 .h1 { margin-bottom: 30px; font-size: 30px; color: white; }
 
 .header { width: 100%; height: 70px; line-height: 70px; background: white; position: fixed; top: 0; left: 0; z-index: 2; }
@@ -207,13 +205,15 @@ a:hover { text-decoration: none; }
 
 @media only screen and (max-width: 600px) { .slide3 { min-height: 1050px !important; } }
 
+.services { padding-top: 70px; }
+
 .services__top { width: 60%; margin: 0 20% 80px; *zoom: 1; }
 .services__top:before, .services__top:after { content: ""; display: table; }
 .services__top:after { clear: both; }
 
-.services__top-item { width: 50%; margin-top: 85px; float: left; text-align: center; }
+.services__top-item { width: 50%; float: left; text-align: center; line-height: 1; vertical-align: middle; display: inline-block; }
 @media only screen and (max-width: 600px) { .services__top-item { width: 100%; margin-top: 35px; } }
-.services__top-item h2 { font-weight: bold; font-size: 70px; color: #29235c; }
+.services__top-item h2 { margin-bottom: 20px; font-weight: bold; font-size: 70px; color: #29235c; }
 @media only screen and (max-width: 900px) { .services__top-item h2 { font-size: 60px; } }
 @media only screen and (max-width: 800px) { .services__top-item h2 { font-size: 50px; } }
 @media only screen and (max-width: 650px) { .services__top-item h2 { font-size: 40px; } }
@@ -233,6 +233,11 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 800px) { .services__cont .services__item p { font-size: 16px; } }
 @media only screen and (max-width: 600px) { .services__cont .services__item p { font-size: 20px; } }
 .services__cont .services__item .i-service1 { margin-right: 10px; }
+
+.benefits__top { background: #29235c; }
+.benefits__top h2 { font-size: 30px; text-align: center; }
+
+.benefits__cont { background: purple; }
 
 [class^="i-"], [class*=" i-"] { display: inline-block; vertical-align: middle; }
 
