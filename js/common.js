@@ -22,7 +22,7 @@ $(document).ready(function() {
     $(".benefits__top").css('line-height', (+benefit_top + 'px'));
     $(".benefits__block").css('height', benefit_cont);
 
-    $(".services__top").css('height', services__top);
+    $(".services__top").css('min-height', services__top);
     $(".services__top").css('line-height', (+services__top + 'px'));
   }
   height();
@@ -98,6 +98,16 @@ $(document).ready(function() {
   $('.slider li span').click(function(event) {
     $(this).parent().addClass('is-open').siblings().removeClass('is-open');
   });
+
+  slide.on( 'swipeleft', swipe_left);
+      function swipe_left(event){
+      $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+  }
+  slide.on( 'swiperight', swipe_right);
+      function swipe_right(event){
+      $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+  }
+  
 });
 
 

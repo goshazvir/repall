@@ -208,6 +208,7 @@ a:hover { text-decoration: none; }
 .services__top { width: 60%; margin: 0 20% 0px; font-size: 0; *zoom: 1; }
 .services__top:before, .services__top:after { content: ""; display: table; }
 .services__top:after { clear: both; }
+@media only screen and (max-width: 600px) { .services__top { line-height: 1 !important; } }
 
 .services__top-item { width: 50%; text-align: center; line-height: 1; vertical-align: middle; display: inline-block; }
 @media only screen and (max-width: 600px) { .services__top-item { width: 100%; margin-top: 35px; } }
@@ -244,6 +245,8 @@ a:hover { text-decoration: none; }
 .benefits__job { width: 34%; background: #3e396c; float: left; }
 
 .benefits__saving { width: 33%; background: #342e64; float: left; }
+
+.benefits__block-in { margin: 18% 17%; }
 
 [class^="i-"], [class*=" i-"] { display: inline-block; vertical-align: middle; }
 
