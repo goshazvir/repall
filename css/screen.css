@@ -205,13 +205,11 @@ a:hover { text-decoration: none; }
 
 @media only screen and (max-width: 600px) { .slide3 { min-height: 1050px !important; } }
 
-.services { padding-top: 70px; }
-
-.services__top { width: 60%; margin: 0 20% 80px; *zoom: 1; }
+.services__top { width: 60%; margin: 0 20% 0px; font-size: 0; *zoom: 1; }
 .services__top:before, .services__top:after { content: ""; display: table; }
 .services__top:after { clear: both; }
 
-.services__top-item { width: 50%; float: left; text-align: center; line-height: 1; vertical-align: middle; display: inline-block; }
+.services__top-item { width: 50%; text-align: center; line-height: 1; vertical-align: middle; display: inline-block; }
 @media only screen and (max-width: 600px) { .services__top-item { width: 100%; margin-top: 35px; } }
 .services__top-item h2 { margin-bottom: 20px; font-weight: bold; font-size: 70px; color: #29235c; }
 @media only screen and (max-width: 900px) { .services__top-item h2 { font-size: 60px; } }
@@ -222,7 +220,7 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 650px) { .services__top-item p { font-size: 18px; } }
 @media only screen and (max-width: 600px) { .services__top-item p { font-size: 20px; } }
 
-.services__cont .services__row { height: 180px; font-size: 0; *zoom: 1; }
+.services__cont .services__row { min-height: 180px; font-size: 0; *zoom: 1; }
 .services__cont .services__row:before, .services__cont .services__row:after { content: ""; display: table; }
 .services__cont .services__row:after { clear: both; }
 @media only screen and (max-width: 600px) { .services__cont .services__row { height: auto; } }
@@ -237,7 +235,15 @@ a:hover { text-decoration: none; }
 .benefits__top { background: #29235c; }
 .benefits__top h2 { font-size: 30px; text-align: center; }
 
-.benefits__cont { background: purple; }
+.benefits__cont { *zoom: 1; }
+.benefits__cont:before, .benefits__cont:after { content: ""; display: table; }
+.benefits__cont:after { clear: both; }
+
+.benefits__cheaper { width: 33%; background: #494474; float: left; }
+
+.benefits__job { width: 34%; background: #3e396c; float: left; }
+
+.benefits__saving { width: 33%; background: #342e64; float: left; }
 
 [class^="i-"], [class*=" i-"] { display: inline-block; vertical-align: middle; }
 

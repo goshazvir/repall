@@ -323,15 +323,15 @@ a
 	@include r(step3)
 		min-height: 1050px !important
 .services
-	padding-top: 70px
+	// padding-top: 70px
 .services__top
 	width: 60%
-	margin: 0 20% 80px
+	margin: 0 20% 0px
+	font-size: 0
 	+clr
 .services__top-item
 	width: 50%
 	// margin-top: 85px
-	float: left
 	text-align: center
 	line-height: 1
 	vertical-align: middle
@@ -361,7 +361,7 @@ a
 			font-size: 20px
 .services__cont
 	.services__row
-		height: 180px
+		min-height: 180px
 		font-size: 0
 		+clr
 		@include r(step3)
@@ -390,6 +390,7 @@ a
 				font-size: 20px
 		.i-service1
 			margin-right: 10px
+
 ///////////////////////////////// * slide4 style * ////////////////////////////////
 .slide4
 
@@ -401,4 +402,17 @@ a
 		font-size: 30px
 		text-align: center
 .benefits__cont
-	background: purple 
+	+clr
+
+.benefits__cheaper
+	width: 33%
+	background: #494474
+	float: left
+.benefits__job
+	width: 34%
+	background: #3E396C
+	float: left
+.benefits__saving
+	width: 33%
+	background: #342E64
+	float: left

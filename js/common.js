@@ -3,21 +3,27 @@ $(document).ready(function() {
   
   function height(){
     var height = $(window).height();
+
     var x = 0.22;
     var benefit_top = height * x;
     var benefit_cont = (height - benefit_top);
 
-    var x2 = 0.13;
-    var x3 = 0.11;
+
 
     var x4 = 0.43;
+    var services__top = height * x4;
+    var services__cont = (height - services__top );
 
     $('.is-slide').height(height);
     $('.slider li').height(height);
+
     $(".benefits__top").css('height', benefit_top);
-    $(".benefits__top").css('line-height', (+benefit_top + 'px'));
     $(".benefits__cont").css('height', benefit_cont);
-    $("")
+    $(".benefits__top").css('line-height', (+benefit_top + 'px'));
+    $(".benefits__block").css('height', benefit_cont);
+
+    $(".services__top").css('height', services__top);
+    $(".services__top").css('line-height', (+services__top + 'px'));
   }
   height();
 
