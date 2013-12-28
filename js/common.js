@@ -95,24 +95,42 @@ $(document).ready(function() {
   });
 
   // slider addClass and removeClass is-active
-  $('.slider li span').click(function(event) {
-    $(this).parent().addClass('is-open').siblings().removeClass('is-open');
-  });
+    var slide = $('.slider li span');
+    var slide_act = $('.slider .is-open span');
+    slide.click(function(event) {
+      $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+    });
 
-  var slide = $('.slider li span');
-   slide.click(function(event) {
-     $(this).parent().addClass('is-open').siblings().removeClass('is-open');
-   });
+    // left swipe on slide preview
+    slide.on( 'swipeleft', swipe_left);
+        function swipe_left(event){
+        $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+    }
+    // left swipe on active slide
+    slide_act.on( 'swipeleft', swipe_left);
+        function swipe_left(event){
+        if ($(this).parent().next().length > 0) { 
+          $('.slider li').removeClass('is-open');
+          $(this).parent().next().addClass('is-open');
+        }
+    }
+    // right swipe on slide preview
+    slide.on( 'swiperight', swipe_right);
+        function swipe_right(event){
+        $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+    }
+    // right swipe on active slide
+    slide_act.on( 'swiperight', swipe_right);
+        function swipe_right(event){
+        if ($(this).parent().prev().length > 0) {
+          $('.slider li').removeClass('is-open');
+          $(this).parent().prev().addClass('is-open');
+        }
+        
+    }
 
-   slide.on( 'swipeleft', swipe_left);
-       function swipe_left(event){
-       $(this).parent().addClass('is-open').siblings().removeClass('is-open');
-   }
-   slide.on( 'swiperight', swipe_right);
-       function swipe_right(event){
-       $(this).parent().addClass('is-open').siblings().removeClass('is-open');
-   }
-  
+
+
 });
 
 

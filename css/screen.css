@@ -255,11 +255,13 @@ a:hover { text-decoration: none; }
 .benefits__block-num { margin-bottom: 55px; font-size: 30px; }
 .benefits__block-num [class^="i-"], .benefits__block-num [class*=" i-"] { margin-bottom: 15px; }
 
+.benefits__wrap { position: relative; overflow: hidden; }
+
 .benefits__block-item { float: left; font-size: 25px; }
 .benefits__block-item [class^="i-"], .benefits__block-item [class*=" i-"] { margin-bottom: 20px; }
 .benefits__block-item.benefits__block-item_r { float: right; }
 
-.benefits__block-symbol { position: absolute; left: 50%; margin-left: -7px; bottom: 0; }
+.benefits__block-symbol { position: absolute; left: 50%; margin-left: -7px; margin-top: -18px; bottom: 0; font-size: 25px; }
 
 [class^="i-"], [class*=" i-"] { display: inline-block; vertical-align: middle; }
 
