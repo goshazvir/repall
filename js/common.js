@@ -99,14 +99,19 @@ $(document).ready(function() {
     $(this).parent().addClass('is-open').siblings().removeClass('is-open');
   });
 
-  slide.on( 'swipeleft', swipe_left);
-      function swipe_left(event){
-      $(this).parent().addClass('is-open').siblings().removeClass('is-open');
-  }
-  slide.on( 'swiperight', swipe_right);
-      function swipe_right(event){
-      $(this).parent().addClass('is-open').siblings().removeClass('is-open');
-  }
+  var slide = $('.slider li span');
+   slide.click(function(event) {
+     $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+   });
+
+   slide.on( 'swipeleft', swipe_left);
+       function swipe_left(event){
+       $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+   }
+   slide.on( 'swiperight', swipe_right);
+       function swipe_right(event){
+       $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+   }
   
 });
 

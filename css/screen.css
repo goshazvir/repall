@@ -89,7 +89,7 @@ a:hover { text-decoration: none; }
 .wrap { margin: 0 auto; }
 .wrap .wrap__in { padding: 70px 0; }
 
-.is-slide { color: white; min-height: 350px; }
+.is-slide { color: white; min-height: 550px !important; }
 
 .slide2 { position: relative; }
 
@@ -233,6 +233,8 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 600px) { .services__cont .services__item p { font-size: 20px; } }
 .services__cont .services__item .i-service1 { margin-right: 10px; }
 
+.benefits { width: 100%; }
+
 .benefits__top { background: #29235c; }
 .benefits__top h2 { font-size: 30px; text-align: center; }
 
@@ -240,13 +242,13 @@ a:hover { text-decoration: none; }
 .benefits__cont:before, .benefits__cont:after { content: ""; display: table; }
 .benefits__cont:after { clear: both; }
 
-.benefits__cheaper { width: 33%; background: #494474; float: left; }
+.benefits__cheaper { background: #494474; }
 
-.benefits__job { width: 34%; background: #3e396c; float: left; }
+.benefits__job { background: #3e396c; }
 
-.benefits__saving { width: 33%; background: #342e64; float: left; }
+.benefits__saving { background: #342e64; }
 
-.benefits__block-in { margin: 18% 17%; text-align: center; position: relative; *zoom: 1; }
+.benefits__block-in { margin: 0 17%; padding: 17% 0; text-align: center; position: relative; *zoom: 1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .benefits__block-in:before, .benefits__block-in:after { content: ""; display: table; }
 .benefits__block-in:after { clear: both; }
 
