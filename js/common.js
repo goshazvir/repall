@@ -109,8 +109,10 @@ $(document).ready(function() {
 // left swipe on active slide
   slide_act.on( 'swipeleft', swipe_left);
       function swipe_left(event){
-      $('.slider li').removeClass('is-open');
-      $(this).parent().next().addClass('is-open');
+      if ($(this).parent().next().length > 0) { 
+        $('.slider li').removeClass('is-open');
+        $(this).parent().next().addClass('is-open');
+      }
   }
 // right swipe on slide preview
   slide.on( 'swiperight', swipe_right);
@@ -120,8 +122,11 @@ $(document).ready(function() {
   // right swipe on active slide
   slide_act.on( 'swiperight', swipe_right);
       function swipe_right(event){
-      $('.slider li').removeClass('is-open');
-      $(this).parent().prev().addClass('is-open');
+      if ($(this).parent().prev().length > 0) {
+        $('.slider li').removeClass('is-open');
+        $(this).parent().prev().addClass('is-open');
+      }
+      
   }
   
 });
