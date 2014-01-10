@@ -219,7 +219,7 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 600px) { .services__top { line-height: 1 !important; margin-bottom: 30px; } }
 
 .services__top-item { width: 50%; text-align: center; line-height: 1; vertical-align: middle; display: inline-block; }
-@media only screen and (max-width: 600px) { .services__top-item { width: 100%; margin-top: 35px; } }
+@media only screen and (max-width: 600px) { .services__top-item { width: 100%; } }
 .services__top-item h2 { margin-bottom: 20px; font-weight: bold; font-size: 70px; color: #29235c; }
 @media only screen and (max-width: 900px) { .services__top-item h2 { font-size: 60px; } }
 @media only screen and (max-width: 800px) { .services__top-item h2 { font-size: 50px; } }
