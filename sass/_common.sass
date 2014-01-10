@@ -415,22 +415,45 @@ a
 	h2
 		font-size: 30px
 		text-align: center
+		@include r(slide4)
+			font-size: 24px
 .benefits__cont
+	font-size: 25px
 	+clr
+	@include r(one)
+		font-size: 18px
+	@include r(step1)
+		font-size: 14px
+	li
+		float: left
+		width: 33.3333%
+		@include r(slide4)
+			width: 100%
+			float: none
+	span
+		vertical-align: middle
+		display: inline-block
+	.saving-wrap
+		// width: 50%
+		text-align: center
+		display: inline-block
+		margin-right: 20px
+	.saving
+		display: inline-block
+		width: 100%
+		max-width: 85px 
+		margin-bottom: 20px
 
 .benefits__cheaper
-
 	background: #494474
 
 .benefits__job
-
 	background: #3E396C
 
 .benefits__saving
-
 	background: #342E64
-
-	
+	.benefits__block-num
+		margin-bottom: 45px
 .benefits__block-in
 	margin: 0 17%
 	padding: 17% 0
@@ -441,16 +464,25 @@ a
 .benefits__block-num
 	margin-bottom: 55px
 	font-size: 30px
+	@include r(one)
+		font-size: 24px
+	@include r(step1)
+		font-size: 21px
 	[class^="i-"], [class*=" i-"]
 		margin-bottom: 15px
 .benefits__wrap
 	position: relative
 	overflow: hidden
 .benefits__block-item
-	// width: 42%
+	width: 47%
+	max-width: 106px 
 	float: left
 	font-size: 25px
-	[class^="i-"], [class*=" i-"]
+	@include r(one)
+		font-size: 18px
+	@include r(step1)
+		font-size: 14px
+	.benefits__i-wrap
 		margin-bottom: 20px
 	&.benefits__block-item_r
 		float: right
@@ -461,7 +493,12 @@ a
 	margin-top: -18px
 	bottom: 0
 	font-size: 25px
-	
+
+.benefits__i-wrap
+	img
+		width: 100%
+.equally
+	margin: 0 10px
 
 
 
