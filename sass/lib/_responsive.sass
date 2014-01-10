@@ -37,6 +37,12 @@ $nav2: 605px
 		// wider than $width
 		@media only screen and (max-width: $nav2)
 			@content
+
+	@else if $media == mob
+		// wider than $width
+		@media only screen and (max-width: $mob)
+			@content
+
 // retina bg
 @mixin retina
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
