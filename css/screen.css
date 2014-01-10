@@ -209,7 +209,7 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 900px) { .slider__text p { font-size: 16px; } }
 @media only screen and (max-width: 650px) { .slider__text p { font-size: 14px; } }
 
-@media only screen and (max-width: 600px) { .slide3 { min-height: 1050px !important; } }
+@media only screen and (max-width: 600px) { .slide3 { height: auto !important; } }
 
 .services__top { width: 60%; margin: 0 20% 0px; font-size: 0; *zoom: 1; }
 .services__top:before, .services__top:after { content: ""; display: table; }
@@ -217,12 +217,12 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 600px) { .services__top { line-height: 1 !important; margin-bottom: 30px; } }
 
 .services__top-item { width: 50%; text-align: center; line-height: 1; vertical-align: middle; display: inline-block; }
-@media only screen and (max-width: 600px) { .services__top-item { width: 100%; } }
+@media only screen and (max-width: 600px) { .services__top-item { width: 100%; margin-top: 35px; } }
 .services__top-item h2 { margin-bottom: 20px; font-weight: bold; font-size: 70px; color: #29235c; }
 @media only screen and (max-width: 900px) { .services__top-item h2 { font-size: 60px; } }
 @media only screen and (max-width: 800px) { .services__top-item h2 { font-size: 50px; } }
 @media only screen and (max-width: 650px) { .services__top-item h2 { font-size: 40px; } }
-@media only screen and (max-width: 600px) { .services__top-item h2 { font-size: 60px; } }
+@media only screen and (max-width: 600px) { .services__top-item h2 { font-size: 48px; } }
 .services__top-item p { color: #a5a6a7; font-size: 20px; }
 @media only screen and (max-width: 650px) { .services__top-item p { font-size: 18px; } }
 @media only screen and (max-width: 600px) { .services__top-item p { font-size: 20px; } }
