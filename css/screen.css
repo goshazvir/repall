@@ -168,7 +168,7 @@ a:hover { text-decoration: none; }
 @media only screen and (min-width: 1200px) and (max-width: 5000px) { .slide1 .h1 { margin-left: -471px; } }
 
 .slide-next { width: 180px; height: 50px; position: absolute; bottom: 30px; left: 50%; margin-left: -90px; font-size: 15px; color: white; }
-.slide-next .i-arr { position: absolute; left: 50%; top: 40px; }
+.slide-next .i-arr { position: absolute; left: 50%; top: 40px; margin-left: -6px; }
 
 @media only screen and (max-width: 600px) { .slide2 { display: none; } }
 
@@ -210,8 +210,6 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 650px) { .slider__text p { font-size: 14px; } }
 
 @media only screen and (max-width: 600px) { .slide3 { min-height: 1050px !important; } }
-
-@media only screen and (max-width: 600px) { .services { padding-top: 70px; } }
 
 .services__top { width: 60%; margin: 0 20% 0px; font-size: 0; *zoom: 1; }
 .services__top:before, .services__top:after { content: ""; display: table; }
