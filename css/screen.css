@@ -123,6 +123,7 @@ a:hover { text-decoration: none; }
 .header__right .lang a { font-size: 12px; color: #9c9c9d; }
 .header__right .lang a:hover { color: #fb6315; }
 .header__right .lang a.is-active { color: #e95103; }
+@media only screen and (max-width: 900px) { .header__right .lang a { font-size: 10px; } }
 
 .nav { float: left; *zoom: 1; }
 .nav:before, .nav:after { content: ""; display: table; }
@@ -139,6 +140,7 @@ a:hover { text-decoration: none; }
 .phone { float: right; font-size: 25px; color: black !important; }
 @media only screen and (max-width: 900px) { .phone { font-size: 18px; } }
 @media only screen and (max-width: 800px) { .phone { font-size: 16px; } }
+@media only screen and (max-width: 320px) { .phone { font-size: 14px; } }
 
 .logo { background: url('../img/icons-s7c1165e5b5.png') 0 -64px no-repeat; width: 190px; height: 31px; margin-top: 20px; float: left; }
 
