@@ -251,6 +251,7 @@ a:hover { text-decoration: none; }
 .benefits__cont:after { clear: both; }
 @media only screen and (max-width: 1100px) { .benefits__cont { font-size: 18px; } }
 @media only screen and (max-width: 900px) { .benefits__cont { font-size: 14px; } }
+@media only screen and (max-width: 675px) { .benefits__cont { height: auto !important; } }
 .benefits__cont li { float: left; width: 33.3333%; }
 @media only screen and (max-width: 675px) { .benefits__cont li { width: 100%; float: none; } }
 .benefits__cont span { vertical-align: middle; display: inline-block; }
@@ -260,6 +261,8 @@ a:hover { text-decoration: none; }
 .benefits__cheaper { background: #494474; }
 
 .benefits__job { background: #3e396c; }
+
+@media only screen and (max-width: 675px) { .benefits__block { height: auto !important; } }
 
 .benefits__saving { background: #342e64; }
 .benefits__saving .benefits__block-num { margin-bottom: 45px; }

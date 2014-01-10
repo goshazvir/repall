@@ -424,6 +424,8 @@ a
 		font-size: 18px
 	@include r(step1)
 		font-size: 14px
+	@include r(slide4)
+		height: auto !important
 	li
 		float: left
 		width: 33.3333%
@@ -449,6 +451,10 @@ a
 
 .benefits__job
 	background: #3E396C
+
+.benefits__block
+	@include r(slide4)
+		height: auto !important	
 
 .benefits__saving
 	background: #342E64
