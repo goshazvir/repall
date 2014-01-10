@@ -248,6 +248,8 @@ a
 				background: rgba(41,35,92, .9)
 				+transition(opacity 0.1s linear 0.1s)
 				+opacity(1)
+				@include r(step1)
+					padding: 35px 60px 60px
 				.ico
 					position: absolute
 					left: 90px
@@ -255,6 +257,8 @@ a
 					top: inherit
 					margin-top: 0
 					bottom: 35px !important  // DELETE!!!
+					@include r(step1)
+						left: 60px
 				.i-ico1
 					margin-bottom: -18px
 				.i-ico2
@@ -331,14 +335,16 @@ a
 	@include r(step3)
 		min-height: 1050px !important
 .services
-	// padding-top: 70px
+	@include r(step3)
+		padding-top: 70px
 .services__top
 	width: 60%
 	margin: 0 20% 0px
 	font-size: 0
 	+clr
 	@include r(step3)
-		line-height: 1 !important 
+		line-height: 1 !important
+		margin-bottom: 30px
 .services__top-item
 	width: 50%
 	// margin-top: 85px
@@ -396,8 +402,6 @@ a
 			line-height: 1.2
 			@include r(step2)
 				font-size: 16px
-			@include r(step3)
-				font-size: 20px
 		.i-service1
 			margin-right: 10px
 
