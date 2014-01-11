@@ -49,7 +49,6 @@ a
 	background: #29235c
 	position: relative
 .slide5
-	background: #4b7e3e
 	color: #323232
 	position: relative
 	.h1
@@ -213,6 +212,8 @@ a
 	margin-left: -90px
 	font-size: 15px
 	color: #FFF
+	@include r(slide4)
+		bottom: 15px
 	.i-arr
 		position: absolute
 		left: 50%
@@ -346,7 +347,7 @@ a
 	@include r(step3)
 		line-height: 1 !important
 		margin-bottom: 30px
-.services__top-item
+.services__top-item 
 	width: 50%
 	// margin-top: 85px
 	text-align: center
@@ -408,11 +409,15 @@ a
 
 ///////////////////////////////// * slide4 style * ////////////////////////////////
 .slide4
-
+	@include r(slide4)
+		height: auto !important 
 .benefits
 	width: 100%
 .benefits__top
 	background: #29235c
+	@include r(slide4)
+		height: 60px
+		line-height: 60px
 	h2
 		font-size: 30px
 		text-align: center
@@ -507,5 +512,9 @@ a
 .equally
 	margin: 0 10px
 
+///////////////////////////////// * slide5 style * ////////////////////////////////
+.slide5
+	.wrap
 
-
+	#map-canvas
+		width: 100%

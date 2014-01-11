@@ -15,6 +15,7 @@ $(document).ready(function() {
     var services__cont = (height - services__top );
 
     $('.is-slide').height(height);
+    $('#map-canvas').height(height);
     $('.slider li').height(height);
 
     $(".benefits__top").css('height', benefit_top);

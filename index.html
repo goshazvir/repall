@@ -10,6 +10,23 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" media="screen" href="css/screen.css">
 	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script>
+	 function initialize() {
+	   var mapOptions = {
+	     zoom: 13,
+	     center: new google.maps.LatLng(50.402036, 30.53269),
+	     disableDefaultUI: true,
+	    zoomControl: true,
+	   zoomControlOptions: {
+	       style: google.maps.ZoomControlStyle.DEFAULT
+	     },
+	     mapTypeId: google.maps.MapTypeId.ROADMAP
+	   }
+	   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	 }
+	 google.maps.event.addDomListener(window, 'load', initialize);
+	 </script>
 </head>
 <body>
 	<header class="header">
@@ -261,9 +278,17 @@
 					</ul>
 			</div>
 		</section>
+		<section id="js-contact" class="is-slide slide5">
+			<div class="wrap">
+				<div id="map-canvas">
+					
+				</div>
+			  
+			</div>
+		</section>
 	</div>
 	<!-- END out -->
-	<script src="js/vendor/jquery.tools.min.js"></script> 
+	<script src="js/vendor/jquery.tools.min.js"></script>
 	<script src="js/vendor/jquery.mobile-1.4.0.min.js"></script>
 	<script src="js/common.js"></script>
 </body>

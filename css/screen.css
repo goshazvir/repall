@@ -98,7 +98,7 @@ a:hover { text-decoration: none; }
 
 .slide4 { background: #29235c; position: relative; }
 
-.slide5 { background: #4b7e3e; color: #323232; position: relative; }
+.slide5 { color: #323232; position: relative; }
 .slide5 .h1 { color: #323232; }
 
 .h1 { margin-bottom: 30px; font-size: 30px; color: white; }
@@ -168,6 +168,7 @@ a:hover { text-decoration: none; }
 @media only screen and (min-width: 1200px) and (max-width: 5000px) { .slide1 .h1 { margin-left: -471px; } }
 
 .slide-next { width: 180px; height: 50px; position: absolute; bottom: 30px; left: 50%; margin-left: -90px; font-size: 15px; color: white; }
+@media only screen and (max-width: 675px) { .slide-next { bottom: 15px; } }
 .slide-next .i-arr { position: absolute; left: 50%; top: 40px; margin-left: -6px; }
 
 @media only screen and (max-width: 600px) { .slide2 { display: none; } }
@@ -238,9 +239,12 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 800px) { .services__cont .services__item p { font-size: 16px; } }
 .services__cont .services__item .i-service1 { margin-right: 10px; }
 
+@media only screen and (max-width: 675px) { .slide4 { height: auto !important; } }
+
 .benefits { width: 100%; }
 
 .benefits__top { background: #29235c; }
+@media only screen and (max-width: 675px) { .benefits__top { height: 60px; line-height: 60px; } }
 .benefits__top h2 { font-size: 30px; text-align: center; }
 @media only screen and (max-width: 675px) { .benefits__top h2 { font-size: 24px; } }
 
@@ -287,6 +291,8 @@ a:hover { text-decoration: none; }
 .benefits__i-wrap img { width: 100%; }
 
 .equally { margin: 0 10px; }
+
+.slide5 #map-canvas { width: 100%; }
 
 [class^="i-"], [class*=" i-"] { display: inline-block; vertical-align: middle; }
 
