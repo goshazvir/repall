@@ -293,7 +293,7 @@ section { position: relative; }
 @media only screen and (max-width: 800px) { .services__cont .services__item p { font-size: 16px; } }
 .services__cont .services__item .i-service1 { margin-right: 10px; }
 
-.used-better { background: #29235c; color: white; min-height: 600px !important; }
+.used-better { background: #29235c; color: white; min-height: 600px; }
 @media only screen and (max-width: 675px) { .used-better { height: auto !important; } }
 
 .benefits { width: 100%; }
@@ -320,8 +320,8 @@ section { position: relative; }
 
 .benefits__job { background: #3e396c; }
 
-.benefits__block { min-height: 500px !important; }
-@media only screen and (max-width: 675px) { .benefits__block { height: auto !important; min-height: auto !important; } }
+.benefits__block { min-height: 500px; }
+@media only screen and (max-width: 675px) { .benefits__block { height: auto !important; min-height: inherit; } }
 
 .benefits__saving { background: #342e64; }
 .benefits__saving .benefits__block-num { margin-bottom: 45px; }
