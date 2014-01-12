@@ -1,20 +1,15 @@
-// var & mixins
-// fonts
-// base
-	// html, body, .out, selection
-	// a, .h2, .h3, .h4, .h5
-// .header
-// .footer
-// index.html style
-///////////////////////////////// *  * ////////////////////////////////
++selection(#fff, #e95103)
 
-///////////////////////////////// * var & mixins * ////////////////////////////////
-
-
-///////////////////////////////// * fonts * ////////////////////////////////
-
-///////////////////////////////// * base * ////////////////////////////////
-// +selection(red, blue)
+html
+	+scrollbar
+		width: 6px
+	+scrollbar-track
+		background: #bec3c3
+	+scrollbar-thumb
+		border-radius: 3px
+		background: #919191
+	+scrollbar-track-piece 
+		background: #e1e1e1
 
 body
 	margin: 0
@@ -29,35 +24,12 @@ a
 	&:hover
 		text-decoration: none
 
+section
+	position: relative
+
 .wrap
 	margin: 0  auto
-	// padding: 70px 0
-	.wrap__in
-		padding: 70px 0
-.is-slide
-	color: white
-	// min-height: 550px !important
-.slide2
-	position: relative
-.slide3
-	background: #f8f8f8
-	color: #323232
-	position: relative
-	.h1
-		color: #323232
-.slide4
-	background: #29235c
-	position: relative
-.slide5
-	color: #323232
-	position: relative
-	.h1
-		color: #323232
-.h1
-	margin-bottom: 30px
-	font-size: 30px
-	color: #FFF
-	
+
 .ui-loader
 	display: none
 ///////////////////////////////// * .header * ////////////////////////////////
@@ -70,7 +42,7 @@ a
 	top: 0
 	left: 0
 	z-index: 2
-	.header-i
+	.header__in
 		padding: 0 5%
 		+clr
 		@include r(step1)
@@ -78,7 +50,6 @@ a
 		@include r(step4)
 			.logo
 				+s(logo_alt)
-
 .header__right
 	overflow: hidden
 	+clr
@@ -100,7 +71,6 @@ a
 				color: #e95103
 			@include r(step1)
 				font-size: 10px
-
 .nav
 	float: left
 	+clr
@@ -123,7 +93,6 @@ a
 			font-size: 14px
 		@include r(nav)
 			font-size: 12px
-
 .phone
 	float: right
 	font-size: 25px
@@ -147,27 +116,26 @@ a
 	position: absolute
 	top: 0
 	z-index: 1666
-.footer-i
+.footer__in
 	padding: 0 5%
 	+clr
-	.logo-wrap
-		margin-right: 35px
-		height: 71px
-		float: left
-		@include r(step2)
-			margin-right: 15px
 	.logo
+		margin-right: 35px
 		+s(logo_alt)
 	@include r(step1)
-		padding: 0 3% 
+		padding: 0 3%
+	@include r(step2)
+		margin-right: 15px
 	@include r(step4)
 		.logo-wrap
 			width: auto
-
+.footer__right
+	overflow: hidden
+	+clr
 .footer_fixed
 	position: fixed
 ///////////////////////////////// * slide1 style * ////////////////////////////////
-.slide1
+.pallets
 	background: #e95103
 	color: #d0ecf6
 	text-align: center
@@ -178,7 +146,7 @@ a
 		height: 100%
 		margin: 0% 10% 0%
 		text-align: center
-	.wrap__in
+	.pallets__in
 		padding-top: 120px
 		position: relative
 		img
@@ -192,6 +160,7 @@ a
 		margin-top: -112px
 		left: 50%
 		margin-left: -50%
+		color: #FFF
 		@include r(step1)
 			margin-top: -84px
 			font-size: 60px
@@ -203,7 +172,7 @@ a
 			font-size: 28px
 		+widescreen
 			margin-left: -471px
-.slide-next
+.pallets__next
 	width: 180px
 	height: 50px
 	position: absolute
@@ -220,7 +189,7 @@ a
 		top: 40px
 		margin-left: -6px
 ///////////////////////////////// * slide2 style * ////////////////////////////////
-.slide2
+.how-work
 	@include r(step3)
 		display: none
 .slider
@@ -235,6 +204,7 @@ a
 		position: relative
 		cursor: pointer
 		+transition(all linear 0.3s)
+		+unselect
 		@include r(step1)
 			width: 10%
 		&.is-open	
@@ -284,7 +254,6 @@ a
 	bottom: 0
 	background: rgba(233,91,3, .9)
 	z-index: 1
-
 	.ico
 		position: absolute
 		top: 50%
@@ -304,7 +273,6 @@ a
 	.i-ico5
 		margin-top: -16px
 		margin-left: -16px
-
 .slider__text
 	min-height: 180px
 	position: absolute
@@ -333,12 +301,10 @@ a
 		@include r(nav)
 			font-size: 14px
 ///////////////////////////////// * slide3 style * ////////////////////////////////
-.slide3
+.our-services
+	background: #f8f8f8
 	@include r(step3)
 		height: auto !important
-.services
-	// @include r(step3)
-	// 	padding-top: 70px
 .services__top
 	width: 60%
 	margin: 0 20% 0px
@@ -406,9 +372,10 @@ a
 				font-size: 16px
 		.i-service1
 			margin-right: 10px
-
 ///////////////////////////////// * slide4 style * ////////////////////////////////
-.slide4
+.used-better
+	background: #29235c
+	color: #FFF 
 	@include r(slide4)
 		height: auto !important 
 .benefits
@@ -451,17 +418,13 @@ a
 		width: 100%
 		max-width: 85px 
 		margin-bottom: 20px
-
 .benefits__cheaper
 	background: #494474
-
 .benefits__job
 	background: #3E396C
-
 .benefits__block
 	@include r(slide4)
-		height: auto !important	
-
+		height: auto !important
 .benefits__saving
 	background: #342E64
 	.benefits__block-num
@@ -482,10 +445,10 @@ a
 		font-size: 21px
 	[class^="i-"], [class*=" i-"]
 		margin-bottom: 15px
-.benefits__wrap
+.benefits__pallets
 	position: relative
 	overflow: hidden
-.benefits__block-item
+.benefits__pallets-item
 	width: 47%
 	max-width: 106px 
 	float: left
@@ -494,9 +457,9 @@ a
 		font-size: 18px
 	@include r(step1)
 		font-size: 14px
-	.benefits__i-wrap
+	.benefits__ico
 		margin-bottom: 20px
-	&.benefits__block-item_r
+	&.benefits__pallets-item_r
 		float: right
 .benefits__block-symbol
 	position: absolute
@@ -505,15 +468,13 @@ a
 	margin-top: -18px
 	bottom: 0
 	font-size: 25px
-
-.benefits__i-wrap
+.benefits__ico
 	img
 		width: 100%
 .equally
 	margin: 0 10px
-
 ///////////////////////////////// * slide5 style * ////////////////////////////////
-.slide5
+.contact-us
 	@include r(slide4)
 		min-height: 550px 
 	#map-canvas
@@ -535,7 +496,6 @@ a
 	@include r(slide4)
 		height: 240px
 		padding: 80px 30px 15px
-
 .contacts__left
 	width: 50%
 	float: left
@@ -603,16 +563,4 @@ a
 		font-size: 21px
 	@include r(step5)
 		font-size: 16px
-
-
-html
-	+scrollbar
-		width: 6px
-	+scrollbar-track
-		background: #bec3c3
-	+scrollbar-thumb
-		border-radius: 3px
-		background: #919191
-	+scrollbar-track-piece 
-		background: #e1e1e1
 		
