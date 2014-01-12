@@ -321,7 +321,7 @@ section { position: relative; }
 .benefits__job { background: #3e396c; }
 
 .benefits__block { min-height: 500px !important; }
-@media only screen and (max-width: 675px) { .benefits__block { height: auto !important; } }
+@media only screen and (max-width: 675px) { .benefits__block { height: auto !important; min-height: auto !important; } }
 
 .benefits__saving { background: #342e64; }
 .benefits__saving .benefits__block-num { margin-bottom: 45px; }
