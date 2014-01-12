@@ -332,6 +332,19 @@ a:hover { text-decoration: none; }
 @media only screen and (max-width: 490px) { .contacts__mail { font-size: 21px; } }
 @media only screen and (max-width: 430px) { .contacts__mail { font-size: 16px; } }
 
+html ::-moz-scrollbar { width: 6px; }
+html ::-webkit-scrollbar { width: 6px; }
+html ::scrollbar { width: 6px; }
+html ::-moz-scrollbar-track { background: #bec3c3; }
+html ::-webkit-scrollbar-track { background: #bec3c3; }
+html ::scrollbar-track { background: #bec3c3; }
+html ::-moz-scrollbar-thumb { border-radius: 3px; background: #919191; }
+html ::-webkit-scrollbar-thumb { border-radius: 3px; background: #919191; }
+html ::scrollbar-thumb { border-radius: 3px; background: #919191; }
+html ::-moz-scrollbar-track-piece { background: #e1e1e1; }
+html ::-webkit-scrollbar-track-piece { background: #e1e1e1; }
+html ::scrollbar-track-piece { background: #e1e1e1; }
+
 [class^="i-"], [class*=" i-"] { display: inline-block; vertical-align: middle; }
 
 .i-arr { background: url('../img/icons-s94a1490219.png') 0 -1464px no-repeat; width: 21px; height: 12px; }
