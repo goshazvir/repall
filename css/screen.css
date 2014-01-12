@@ -320,7 +320,7 @@ a:hover { text-decoration: none; }
 
 .contacts__right { width: 50%; float: right; text-align: right; }
 
-.contacts__num { font-size: 35px; color: #e95103; margin-top: 15px; margin-bottom: 30px; }
+.contacts__num { display: block; font-size: 35px; color: #e95103; margin-top: 15px; margin-bottom: 30px; }
 @media only screen and (max-width: 900px) { .contacts__num { font-size: 28px; margin-bottom: 25px; } }
 @media only screen and (max-width: 800px) { .contacts__num { font-size: 21px; margin-bottom: 35px; } }
 @media only screen and (max-width: 490px) { .contacts__num { font-size: 18px; margin-bottom: 30px; } }
