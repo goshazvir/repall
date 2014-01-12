@@ -514,19 +514,93 @@ a
 
 ///////////////////////////////// * slide5 style * ////////////////////////////////
 .slide5
+	@include r(slide4)
+		min-height: 550px 
 	#map-canvas
 		width: 100%
-
+		@include r(slide4)
+			min-height: 550px
 .contacts
-	height: 300px
-	padding: 120px 60px 30px
+	height: 280px
+	padding: 100px 60px 30px
 	background: rgba(255,255,255, .9)
 	z-index: 1
 	position: absolute
 	top: 0
 	left: 0
 	right: 0
+	line-height: 1
 	+box
+	+clr
 	@include r(slide4)
-		height: 200px
-		padding: 100px 30px 15px
+		height: 240px
+		padding: 80px 30px 15px
+
+.contacts__left
+	width: 50%
+	float: left
+	font-size: 25px
+	line-height: 1.2
+	color: #adadad
+	@include r(step1)
+		font-size: 21px
+	@include r(step2)
+		font-size: 18px
+	@include r(step4)
+		font-size: 14px
+	@include r(step5)
+		font-size: 12px
+.contacts__coordinates
+	margin: 35px 0 30px
+	font-size: 18px
+	@include r(step1)
+		font-size: 16px
+	@include r(step2)
+		font-size: 14px
+	@include r(step4)
+		font-size: 12px
+	@include r(step5)
+		font-size: 11px
+.contacts__copy
+	font-size: 15px
+	color: #C6C6C6
+	@include r(step2)
+		font-size: 13px
+	@include r(step4)
+		font-size: 12px
+	@include r(step5)
+		font-size: 11px
+.contacts__right
+	width: 50%
+	float: right
+	text-align: right
+.contacts__num
+	font-size: 35px
+	color: #e95103
+	margin-top: 15px
+	margin-bottom: 30px
+	@include r(step1)
+		font-size: 28px
+		margin-bottom: 25px
+	@include r(step2)
+		font-size: 21px
+		margin-bottom: 35px
+	@include r(step4)
+		font-size: 18px
+		margin-bottom: 30px
+	@include r(step5)
+		font-size: 14px
+		margin-bottom: 30px
+.contacts__mail
+	font-size: 50px
+	color: #e95103
+	@include r(step1)
+		font-size: 35px
+	@include r(step2)
+		font-size: 24px
+	@include r(step4)
+		font-size: 21px
+	@include r(step5)
+		font-size: 16px
+
+		

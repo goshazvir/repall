@@ -3,6 +3,7 @@ $step1: 900px
 $step2: 800px
 $step3: 600px
 $step4: 490px
+$step5: 430px
 
 $slide4: 675px
 $nav: 650px
@@ -29,6 +30,11 @@ $nav2: 605px
 	@else if $media == step4
 		// wider than $width
 		@media only screen and (max-width: $step4)
+			@content
+
+	@else if $media == step5
+		// wider than $width
+		@media only screen and (max-width: $step5)
 			@content
 
 	@else if $media == nav
