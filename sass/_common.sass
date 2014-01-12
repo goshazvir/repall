@@ -26,6 +26,7 @@ a
 
 section
 	position: relative
+	// min-height: 600px !important 
 
 .wrap
 	margin: 0  auto
@@ -140,7 +141,11 @@ section
 	color: #d0ecf6
 	text-align: center
 	position: relative
-	min-height: 350px !important 
+	min-height: 600px !important
+	@include r(step2)
+		min-height: 550px !important
+	@include r(step5)
+		min-height: 350px !important
 	.wrap
 		width: 80%
 		height: 100%
@@ -149,29 +154,29 @@ section
 	.pallets__in
 		padding-top: 120px
 		position: relative
+		text-align: center
 		img
 			max-width: 100%
 			max-height: 100% 
 	.h1
 		font-weight: 100 
-		font-size: 80px
+		font-size: 70px
 		position: absolute
 		top: 50%
-		margin-top: -112px
-		left: 50%
-		margin-left: -50%
+		margin-top: -52px
+		display: inline-block
 		color: #FFF
 		@include r(step1)
-			margin-top: -84px
+			margin-top: -40px
 			font-size: 60px
+			line-height: 1.2 
 		@include r(step3)
-			margin-top: -61px
+			margin-top: -20px
 			font-size: 40px
 		@include r(step4)
-			margin-top: -39px
+			margin-top: 10px
 			font-size: 28px
 		+widescreen
-			margin-left: -471px
 .pallets__next
 	width: 180px
 	height: 50px
@@ -190,15 +195,18 @@ section
 		margin-left: -6px
 ///////////////////////////////// * slide2 style * ////////////////////////////////
 .how-work
+	min-height: 500px !important
 	@include r(step3)
 		display: none
 .slider
 	z-index: 1666
+	min-height: 500px !important
 	@include r(step3)
 		display: none
 	+clr
 	li
 		width: 5%
+		min-height: 500px !important
 		float: left
 		overflow: hidden
 		position: relative
@@ -303,6 +311,7 @@ section
 ///////////////////////////////// * slide3 style * ////////////////////////////////
 .our-services
 	background: #f8f8f8
+	min-height: 550px 
 	@include r(step3)
 		height: auto !important
 .services__top
@@ -347,6 +356,7 @@ section
 	.services__row
 		min-height: 180px
 		font-size: 0
+		text-align: center
 		+clr
 		@include r(step3)
 			height: auto
@@ -356,9 +366,8 @@ section
 		vertical-align: top
 		display: inline-block
 		@include r(step3)
-			width: 50%
+			width: 48%
 			margin-bottom: 20px
-			float: none
 			vertical-align: top
 		[class^="i-"], [class*=" i-"]
 			vertical-align: top
@@ -375,7 +384,8 @@ section
 ///////////////////////////////// * slide4 style * ////////////////////////////////
 .used-better
 	background: #29235c
-	color: #FFF 
+	color: #FFF
+	min-height: 600px !important
 	@include r(slide4)
 		height: auto !important 
 .benefits
@@ -390,6 +400,8 @@ section
 		text-align: center
 		@include r(slide4)
 			font-size: 24px
+		+widescreen
+			font-size: 50px
 .benefits__cont
 	font-size: 25px
 	+clr
@@ -423,6 +435,7 @@ section
 .benefits__job
 	background: #3E396C
 .benefits__block
+	min-height: 500px !important
 	@include r(slide4)
 		height: auto !important
 .benefits__saving

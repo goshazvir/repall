@@ -25,6 +25,11 @@ $(document).ready(function() {
   }
   height();
 
+
+
+
+
+
 // footer
   function map_scroll() {
     var position = $(".js-footer").offset().top;
@@ -45,12 +50,14 @@ $(document).ready(function() {
   $(window).scroll(function(){
     if ($(".js-footer").length > 0){
     map_scroll();
+
   }
   });
   
   $(window).resize(function(){
     if ($(".js-footer").length > 0){
       map_scroll();
+
     }
     height();
   });
