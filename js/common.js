@@ -25,15 +25,10 @@ $(document).ready(function() {
   }
   height();
 
-
-
-
-
-
 // footer
   function map_scroll() {
     var position = $(".js-footer").offset().top;
-    var position_2 = $("#js-how-work").offset().top;
+    var position_2 = $("#js-slide2").offset().top;
             
     if ($(window).scrollTop() >= position) {
       $(".js-footer").addClass('footer_fixed');
@@ -50,20 +45,38 @@ $(document).ready(function() {
   $(window).scroll(function(){
     if ($(".js-footer").length > 0){
     map_scroll();
-
+    scrollnav();
   }
   });
   
   $(window).resize(function(){
     if ($(".js-footer").length > 0){
       map_scroll();
-
+      scrollnav();
     }
     height();
   });
 
+  // scrollnav
+  function scrollnav() {
+     $(".js-slide").each(function(){
+        var pos = $(this).offset().top;
+        var id = $(this).attr('id');
+        console.log("."+id);
+        if ($(window).scrollTop() >= pos) {
+          $(".js-nav li").removeClass("is-active");
+          //$("."+id).parent().addClass("current");
+          $('[href = #'+id+']').parent().addClass('is-active');
+        }
+     });
+  }
+  if ($(".faq-nav").length > 0) {
+    scrollnav();
+  }
+
   // SCROLL click navigation
   $(".js-nav a").click(function (){
+      $(this).parent().addClass('is-active').siblings().removeClass('is-active');
       var page = $(this).attr("href");
       $(this).parents(".js-menu-list").hide();
       $('body').animate({
@@ -90,11 +103,6 @@ $(document).ready(function() {
         scrollTop: $(page2).offset().top
     }, 500);
     return false;
-  });
-
-  // nav addClass and removeClass is-active
-  $('.js-nav a').click(function(event) {
-    $(this).parent().addClass('is-active').siblings().removeClass('is-active');
   });
 
   // slider addClass and removeClass is-active
