@@ -142,7 +142,7 @@ html ::-moz-scrollbar-track-piece { background: #e1e1e1; }
 html ::-webkit-scrollbar-track-piece { background: #e1e1e1; }
 html ::scrollbar-track-piece { background: #e1e1e1; }
 
-body { margin: 0; font-family: "Montserrat", sans-serif; font-weight: normal; line-height: 1.4; font-size: 14px; }
+body { margin: 0; font-family: "Montserrat", sans-serif; font-weight: normal; line-height: 1.4; font-size: 14px; webkit-font-smoothing: antialiased; }
 
 a { text-decoration: none; }
 a:hover { text-decoration: none; }

@@ -1,7 +1,8 @@
 $(document).ready(function() {
     
   function height(){
-    var height = $(window).height();
+    var windowheight = $(window).height();
+    var height = windowheight;
 
     var x = 0.22;
     var benefit_top = height * x;
@@ -47,16 +48,12 @@ $(document).ready(function() {
      $(".js-slide").each(function(){
         var pos = $(this).offset().top;
         var id = $(this).attr('id');
-        console.log("."+id);
         if ($(window).scrollTop() >= pos) {
           $(".js-nav li").removeClass("is-active");
           //$("."+id).parent().addClass("current");
           $('[href = #'+id+']').parent().addClass('is-active');
         }
      });
-  }
-  if ($(".faq-nav").length > 0) {
-    scrollnav();
   }
 
   function killslider() {
@@ -65,7 +62,6 @@ $(document).ready(function() {
     }
   }
   killslider();
-
 
   // SCROLL click navigation
   $(".js-nav a").click(function (){
@@ -78,16 +74,31 @@ $(document).ready(function() {
       return false;
   });
 
-  // SCROLL click button
-  $(".js-pallet-next").click(function (){
-    var page2 = $(this).attr("href");
-    $('body').animate({
-        scrollTop: $(page2).offset().top
-    }, 500);
-    $('.js-nav li').removeClass('is-active');
-    $('.js-nav li:first-child').addClass('is-active');
-    return false;
+
+  // click js-pallet-next
+  $(".js-pallet-next").bind("click", function (){
+    if ($(window).width() <= 600){
+      var page3 = $(".our-services");
+      $('body').animate({
+          scrollTop: $(page3).offset().top
+      }, 500);
+      return false;
+    }
+    else{
+      var page2 = $(this).attr("href");
+      $('body').animate({
+          scrollTop: $(page2).offset().top
+      }, 500);
+      $('.js-nav li').removeClass('is-active');
+      $('.js-nav li:first-child').addClass('is-active');
+      return false;
+    }
   });
+
+
+
+
+
 
   // SCROLL click logo
   $(".js-logo").click(function (){
@@ -98,7 +109,6 @@ $(document).ready(function() {
     return false;
   });
 
-  
   // slider addClass and removeClass is-active
     var slide = $('.js-slider li span');
     var slide_act = $('.js-slider .is-open span');
