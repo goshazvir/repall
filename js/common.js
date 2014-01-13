@@ -98,6 +98,7 @@ $(document).ready(function() {
     return false;
   });
 
+  
   // slider addClass and removeClass is-active
     var slide = $('.js-slider li span');
     var slide_act = $('.js-slider .is-open span');
@@ -150,10 +151,6 @@ $(document).ready(function() {
       }
       height();
     });
-
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      $(".out").css("display", "none");
-    }
 
 });
 
