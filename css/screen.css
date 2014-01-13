@@ -226,7 +226,7 @@ section { position: relative; }
 .how-work { min-height: 500px !important; }
 @media only screen and (max-width: 600px) { .how-work { display: none !important; } }
 
-.slider { z-index: 1666; min-height: 500px !important; *zoom: 1; }
+.slider { z-index: 1666; min-height: 550px !important; *zoom: 1; }
 @media only screen and (max-width: 600px) { .slider { display: none; } }
 .slider:before, .slider:after { content: ""; display: table; }
 .slider:after { clear: both; }

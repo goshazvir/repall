@@ -75,29 +75,6 @@ $(document).ready(function() {
   });
 
 
-  // click js-pallet-next
-  $(".js-pallet-next").bind("click", function (){
-    if ($(window).width() <= 600){
-      var page3 = $(".our-services");
-      $('body').animate({
-          scrollTop: $(page3).offset().top
-      }, 500);
-      return false;
-    }
-    else{
-      var page2 = $(this).attr("href");
-      $('body').animate({
-          scrollTop: $(page2).offset().top
-      }, 500);
-      $('.js-nav li').removeClass('is-active');
-      $('.js-nav li:first-child').addClass('is-active');
-      return false;
-    }
-  });
-
-
-
-
 
 
   // SCROLL click logo
@@ -163,5 +140,28 @@ $(document).ready(function() {
     });
 
 });
+
+// click js-pallet-next
+function killslider(){
+  $(".js-pallet-next").bind("click", function (){
+    if ($(window).width() <= 600){
+      var page3 = $(".our-services");
+      $('body').animate({
+          scrollTop: $(page3).offset().top
+      }, 500);
+      return false;
+    }
+    else{
+      var page2 = $(this).attr("href");
+      $('body').animate({
+          scrollTop: $(page2).offset().top
+      }, 500);
+      $('.js-nav li').removeClass('is-active');
+      $('.js-nav li:first-child').addClass('is-active');
+      return false;
+    }
+  });
+}
+killslider();
 
 
