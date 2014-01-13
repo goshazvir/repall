@@ -151,6 +151,10 @@ $(document).ready(function() {
       height();
     });
 
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $(".out").css("display", "none");
+    }
+
 });
 
 
