@@ -142,7 +142,7 @@ $(document).ready(function() {
 });
 
 // click js-pallet-next
-function killslider(){
+function palletnext(){
   $(".js-pallet-next").bind("click", function (){
     if ($(window).width() <= 600){
       var page3 = $(".our-services");
@@ -162,6 +162,6 @@ function killslider(){
     }
   });
 }
-killslider();
+palletnext();
 
 

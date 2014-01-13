@@ -269,7 +269,7 @@ section { position: relative; }
 .services__top { width: 60%; margin: 0 20% 0px; font-size: 0; *zoom: 1; }
 .services__top:before, .services__top:after { content: ""; display: table; }
 .services__top:after { clear: both; }
-@media only screen and (max-width: 600px) { .services__top { line-height: 1 !important; margin-bottom: 30px; } }
+@media only screen and (max-width: 600px) { .services__top { padding-top: 70px; line-height: 1 !important; margin-bottom: 30px; } }
 
 .services__top-item { width: 50%; text-align: center; line-height: 1; vertical-align: middle; display: inline-block; }
 @media only screen and (max-width: 600px) { .services__top-item { width: 100%; margin-top: 35px; } }
