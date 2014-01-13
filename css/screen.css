@@ -224,7 +224,7 @@ section { position: relative; }
 .pallets__next .i-arr { position: absolute; left: 50%; top: 40px; margin-left: -6px; }
 
 .how-work { min-height: 500px !important; }
-@media only screen and (max-width: 600px) { .how-work { display: none; } }
+@media only screen and (max-width: 600px) { .how-work { display: none !important; } }
 
 .slider { z-index: 1666; min-height: 500px !important; *zoom: 1; }
 @media only screen and (max-width: 600px) { .slider { display: none; } }

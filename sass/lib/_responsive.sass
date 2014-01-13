@@ -9,6 +9,7 @@ $slide4: 675px
 $nav: 650px
 $mob: 320px
 $nav2: 605px
+$nav3: 606px
 
 
 @mixin r($media:'step1')
@@ -45,6 +46,11 @@ $nav2: 605px
 	@else if $media == nav2
 		// wider than $width
 		@media only screen and (max-width: $nav2)
+			@content
+
+	@else if $media == nav3
+		// wider than $width
+		@media only screen and (max-width: $nav3)
 			@content
 
 	@else if $media == mob
