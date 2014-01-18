@@ -55,7 +55,7 @@ $(document).ready(function() {
         }
      });
   }
-
+  // kill slide for mobile
   function killslider() {
     if ($(window).width() <= 600){
       $('.js-slide2').remove();
@@ -74,9 +74,6 @@ $(document).ready(function() {
       return false;
   });
 
-
-
-
   // SCROLL click logo
   $(".js-logo").click(function (){
     var page2 = $(this).attr("href");
@@ -89,8 +86,14 @@ $(document).ready(function() {
   // slider addClass and removeClass is-active
     var slide = $('.js-slider li span');
     var slide_act = $('.js-slider .is-open span');
+    var slideitem = $('.js-slider li');
     slide.click(function(event) {
       $(this).parent().addClass('is-open').siblings().removeClass('is-open');
+    });
+
+    $(".js-slider-prev").click(function(){
+      slideitem.addClass('is-open').siblings().removeClass('is-open');
+      // $(this).next("li").addClass('is-open');
     });
 
     // left swipe on slide preview
