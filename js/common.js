@@ -20,7 +20,6 @@ $(document).ready(function() {
     $(".js-benefits-cont").css('height', benefit_cont);
     $(".js-benefits-top").css('line-height', (+benefit_top + 'px'));
     $(".js-benefits-block").css('height', benefit_cont);
-
     $(".js-services-top").css('min-height', services__top);
     $(".js-services-top").css('line-height', (+services__top + 'px'));
   }
@@ -92,8 +91,12 @@ $(document).ready(function() {
     });
 
     $(".js-slider-prev").click(function(){
-      slideitem.addClass('is-open').siblings().removeClass('is-open');
-      // $(this).next("li").addClass('is-open');
+    	$(this).parents("li").removeClass('is-open');
+    	$(this).parents("li").prev().addClass('is-open');
+    });
+    $(".js-slider-next").click(function(){
+    	$(this).parents("li").removeClass('is-open');
+    	$(this).parents("li").next().addClass('is-open');
     });
 
     // left swipe on slide preview
